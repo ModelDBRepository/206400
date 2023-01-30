@@ -1,5 +1,5 @@
 # -*- coding: iso-8859-1 -*-
-from __future__ import division
+
 
 from numpy import * # zeros, where, diff
 from matplotlib.pyplot import *

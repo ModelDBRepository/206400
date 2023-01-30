@@ -1,4 +1,4 @@
-from __future__ import division
+
 import numpy as np
 
 from neuron import h, nrn
@@ -97,7 +97,7 @@ class NewNeuron(object):
         colors=["orangered","darkred","gold"]
 
         for index, item in enumerate(stim_list):
-            print "Iinj =", item, "nA"
+            print("Iinj =", item, "nA")
             self.simulation.insert_IClamp(location = self.soma(0.5), delay=params.delay, amp = item, dur = params.dur)
             self.simulation.run_neuron()
             
@@ -124,9 +124,9 @@ class NewNeuron(object):
         pyl.figure(1)
         fig1_1.set_xlim(95,115)
         fig1_1.set_ylim(-90,60)
-        xtick_positions = range(-80,61,20) 
+        xtick_positions = list(range(-80,61,20)) 
         xtick_labels = [-80, "", -40, "", 0, "",40,""]
-        ytick_positions = range(-100, 701,100) 
+        ytick_positions = list(range(-100, 701,100)) 
         ytick_labels = ["", 0, "", 200, "",400, "",600,""]
         xtick_positions_t = [95,100,105,110,115] 
         xtick_labels_t = [0,"",10,"",20]
